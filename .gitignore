@@ -1,0 +1,12 @@
+build/
+cmake-build-*/
+.freebuff/
+.vs/
+out/
+*.exe
+*.obj
+*.o
+*.pdb
+*.ilk
+CMakeCache.txt
+CMakeFiles/
