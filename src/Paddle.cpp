@@ -5,10 +5,10 @@
 using namespace std;
 
 Paddle::Paddle(float startX, float startY, float w, float h, sf::Color color)
-    : width(w), height(h), speed(MOVE_SPEED), neonColor(color) {
+    : width(w), height(h), speed(MOVE_SPEED), color(color) {
     shape.setSize(sf::Vector2f(width, height));
     shape.setPosition(startX, startY);
-    shape.setFillColor(neonColor);
+    shape.setFillColor(color);
 }
 
 void Paddle::moveLeft(float dt) {
@@ -56,7 +56,7 @@ void Paddle::render(sf::RenderWindow& window) {
 
     sf::RectangleShape glow(sf::Vector2f(width + 8.0f, height + 8.0f));
     glow.setPosition(pos.x - 4.0f, pos.y - 4.0f);
-    glow.setFillColor(sf::Color(neonColor.r, neonColor.g, neonColor.b, 65));
+    glow.setFillColor(sf::Color(color.r, color.g, color.b, 65));
     window.draw(glow);
 
     window.draw(shape);

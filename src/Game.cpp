@@ -5,7 +5,7 @@
 using namespace std;
 
 Game::Game()
-    : window(sf::VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), "Vertical Neon Pong", sf::Style::Titlebar | sf::Style::Close),
+    : window(sf::VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), "Pong", sf::Style::Titlebar | sf::Style::Close),
       state(GameState::PLAYING),
       playerPaddle((WINDOW_WIDTH - Paddle::DEFAULT_WIDTH) / 2.0f, WINDOW_HEIGHT - 48.0f, Paddle::DEFAULT_WIDTH, Paddle::DEFAULT_HEIGHT, sf::Color(0, 240, 255)),
       aiPaddle((WINDOW_WIDTH - Paddle::DEFAULT_WIDTH) / 2.0f, 32.0f, Paddle::DEFAULT_WIDTH, Paddle::DEFAULT_HEIGHT, sf::Color(255, 75, 130)),

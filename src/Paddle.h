@@ -13,7 +13,7 @@ public:
     float width;
     float height;
     float speed;
-    sf::Color neonColor;
+    sf::Color color;
 
     Paddle(float startX, float startY, float w = DEFAULT_WIDTH, float h = DEFAULT_HEIGHT, sf::Color color = sf::Color(0, 229, 255));
 

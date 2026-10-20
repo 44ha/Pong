@@ -1,40 +1,40 @@
-# 🏓 Vertical Neon Pong (C++ & SFML)
+# Pong (C++ & SFML)
 
-A modern, vertical-oriented Pong game written in **C++** using **SFML** with sleek neon aesthetics, dynamic lighting effects, and an intelligent AI opponent.
+A Pong game written in **C++** using **SFML** with a dark visual style, soft glow effects, and an intelligent AI opponent.
 
 ---
 
-## 🎮 Game Features & Design
+## Game Features & Design
 
-- **Vertical Court Layout**:
-  - **Player 1 (Bottom Paddle)**: Cyan neon paddle controlled by arrow keys.
-  - **AI Opponent (Top Paddle)**: Neon magenta/pink paddle with smooth tracking.
+- **Split Court Layout**:
+  - **Player 1 (Bottom Paddle)**: Cyan paddle controlled by arrow keys.
+  - **AI Opponent (Top Paddle)**: Pink paddle with smooth tracking.
 - **Dynamic Physics & Angle Steering**: Ball reflection angle adjusts based on where it hits the paddle, rewarding skilled edge shots.
 - **Speed Escalation**: The ball accelerates with each successful rally hit up to a max speed limit.
-- **Aesthetic Neon Glow**: Multi-pass aura rendering for ball and paddles.
+- **Glow Rendering**: Multi-pass aura rendering for ball and paddles.
 - **Fail-safe Font System**: Loads a font from `assets/` if present, otherwise falls back to a system font, and finally to procedural 7-segment vector digits — all without crashing.
 
 ---
 
-## 🕹️ Controls
+## Controls
 
 | Key | Action |
 |---|---|
-| **← Left Arrow** | Move paddle left |
-| **→ Right Arrow** | Move paddle right |
+| **Left Arrow** | Move paddle left |
+| **Right Arrow** | Move paddle right |
 | **`P`** | Pause / Resume match |
 | **`R`** | Restart match at any time |
 | **`Escape`** | Exit game |
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```text
 Pong/
 ├── assets/             # Optional: place a font here as font.ttf
 ├── src/
-│   ├── Ball.h          # Ball state, speed, reflection physics & neon rendering
+│   ├── Ball.h          # Ball state, speed, reflection physics & rendering
 │   ├── Ball.cpp
 │   ├── Paddle.h        # Paddle movement, boundaries, AI tracking & glow
 │   ├── Paddle.cpp
@@ -47,7 +47,7 @@ Pong/
 
 ---
 
-## 🛠️ How to Build and Run
+## How to Build and Run
 
 ### Prerequisites
 
@@ -90,12 +90,12 @@ g++ -std=c++17 src/*.cpp -o Pong -lsfml-graphics -lsfml-window -lsfml-system
 
 ### Option 3: Visual Studio (Manual Setup)
 
-1. Open Visual Studio → Create a new **C++ Empty Project**.
+1. Open Visual Studio and create a new **C++ Empty Project**.
 2. Add existing items from the `src/` folder (`main.cpp`, `Game.cpp`, `Game.h`, `Paddle.cpp`, `Paddle.h`, `Ball.cpp`, `Ball.h`).
 3. In Project Properties:
-   - **C/C++ → General → Additional Include Directories**: Add `SFML/include`.
-   - **Linker → General → Additional Library Directories**: Add `SFML/lib`.
-   - **Linker → Input → Additional Dependencies**: Add:
+   - **C/C++ > General > Additional Include Directories**: Add `SFML/include`.
+   - **Linker > General > Additional Library Directories**: Add `SFML/lib`.
+   - **Linker > Input > Additional Dependencies**: Add:
      - `sfml-graphics.lib`
      - `sfml-window.lib`
      - `sfml-system.lib`
@@ -104,7 +104,7 @@ g++ -std=c++17 src/*.cpp -o Pong -lsfml-graphics -lsfml-window -lsfml-system
 
 ---
 
-## 🏆 Scoring Rules
+## Scoring Rules
 
 - First player to reach **7 points** wins the match.
 - Press **`R`** at the Game Over screen to instantly start a rematch.
